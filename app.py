@@ -21,12 +21,6 @@ import streamlit as st
 # Step 2: Page setup
 st.set_page_config(page_title="EduPro Instructor & Course Dashboard", layout="wide")
 st.title("EduPro - Instructor Performance & Course Quality Dashboard")
-st.caption(
-    "NOTE: This dashboard runs on SYNTHETIC (sample) data, generated to match "
-    "the required Teachers / Courses / Transactions schema, since the real "
-    "data was not available. Swap the CSVs in the data/ folder with real "
-    "data any time — the dashboard logic stays the same."
-)
 
 # Step 3: Load and merge the data (cached so it only runs once)
 @st.cache_data
