@@ -31,10 +31,12 @@ st.caption(
 # Step 3: Load and merge the data (cached so it only runs once)
 @st.cache_data
 def load_data():
-    teachers = pd.read_csv("data/teachers.csv")
-    courses = pd.read_csv("data/courses.csv")
-    transactions = pd.read_csv("data/transactions.csv")
+    teachers = pd.read_csv("EduPro Online Platform.xlsx - Teachers.csv")
+    courses = pd.read_csv("EduPro Online Platform.xlsx - Courses.csv")
+    transactions = pd.read_csv("EduPro Online Platform.xlsx - Transactions.csv")
 
+
+  
     # Join everything together, one row per enrollment
     merged = transactions.merge(courses, on="CourseID", how="left")
     merged = merged.merge(teachers, on="TeacherID", how="left")
