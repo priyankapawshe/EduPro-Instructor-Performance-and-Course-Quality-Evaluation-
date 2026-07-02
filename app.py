@@ -206,15 +206,3 @@ else:
     st.write("No data for the selected filters.")
 
 st.divider()
-
-# ---------------------------------------------------------
-# Data download
-# ---------------------------------------------------------
-st.subheader("Download Filtered Data")
-csv_data = filtered_merged.to_csv(index=False).encode("utf-8")
-st.download_button(
-    label="Download Filtered Enrollment Data as CSV",
-    data=csv_data,
-    file_name="filtered_instructor_course_data.csv",
-    mime="text/csv",
-)
