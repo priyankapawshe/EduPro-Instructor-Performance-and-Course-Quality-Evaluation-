@@ -27,7 +27,7 @@ st.write(
 # instead of reloading the file every time you move a slider.
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\SANDEEP\OneDrive\Desktop\Unified_Mentor_projects\project5\EduPro Online Platform.xlsx - Users.csv")
+    df = pd.read_csv("EduPro Online Platform.xlsx - Users.csv")
     df["EmailDomain"] = df["Email"].str.split("@").str[1]
 
     def get_age_group(age):
