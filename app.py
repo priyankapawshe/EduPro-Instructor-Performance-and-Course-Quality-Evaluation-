@@ -20,7 +20,7 @@ import streamlit as st
 
 # Step 2: Page setup
 st.set_page_config(page_title="EduPro Instructor & Course Dashboard", layout="wide")
-st.title("EduPro - Instructor Performance & Course Quality Dashboard")
+st.title("EduPro-Instructor Performance & Course Quality Dashboard")
 
 # Step 3: Load and merge the data (cached so it only runs once)
 @st.cache_data
@@ -149,7 +149,7 @@ with chart_col1:
         st.write("No data for the selected filters.")
 
 with chart_col2:
-    st.subheader("Course Quality Heatmap (Category x Level)")
+    st.subheader("Course Quality Heatmap(Category x Level)")
     if len(filtered_merged) > 0:
         pivot = filtered_merged.pivot_table(
             index="CourseCategory", columns="CourseLevel", values="CourseRating", aggfunc="mean"
